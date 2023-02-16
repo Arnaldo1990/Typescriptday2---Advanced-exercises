@@ -12,9 +12,18 @@ class Vehicles{
         this.image = image;
     }
     printCarName() {
-        return `<img src="${this.image}"> This ${this.bName} is a ${this.type} and costs about ${this.price}€. It is now available in ${this.color}.`;
-    }
-}
+        return `<div class="card" style="width: 18rem;">
+        <img src="${this.image}" class="card-img-top" alt="${this.bName}">
+        <div class="card-body">
+          <h5 class="card-title Model">${this.bName}</h5>
+          <p class="fuel">Type: ${this.type}</p>
+          <p class="year">Available Colour: ${this.color}</p>
+          <p class="location"> Price: ${this.price}€</p>
+          <a href="#" class="btn btn-primary">Buy</a>
+        </div>
+      </div>`;
+      }
+      }
 let astonMartin = document.getElementById("carname") as HTMLElement
 let astonMartindb7 = new Vehicles ("Aston Martin", "sportscar", 50000, "https://cdn.pixabay.com/photo/2017/03/05/15/29/aston-martin-2118857__340.jpg","red");
 astonMartin.innerHTML = astonMartindb7.printCarName();

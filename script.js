@@ -7,7 +7,7 @@ var Vehicles = /** @class */ (function () {
         this.image = image;
     }
     Vehicles.prototype.printCarName = function () {
-        return "<img src=\"".concat(this.image, "\"> This ").concat(this.bName, " is a ").concat(this.type, " and costs about ").concat(this.price, "\u20AC. It is now available in ").concat(this.color, ".");
+        return "<div class=\"card\" style=\"width: 18rem;\">\n        <img src=\"".concat(this.image, "\" class=\"card-img-top\" alt=\"").concat(this.bName, "\">\n        <div class=\"card-body\">\n          <h5 class=\"card-title Model\">").concat(this.bName, "</h5>\n          <p class=\"fuel\">Type: ").concat(this.type, "</p>\n          <p class=\"year\">Available Colour: ").concat(this.color, "</p>\n          <p class=\"location\"> Price: ").concat(this.price, "\u20AC</p>\n          <a href=\"#\" class=\"btn btn-primary\">Buy</a>\n        </div>\n      </div>");
     };
     return Vehicles;
 }());
