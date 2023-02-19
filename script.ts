@@ -31,11 +31,19 @@ class Vehicles{
       class Motorbikes extends Vehicles{
         motorbike: string;
         trucks: string;
+        fueltype: string;
+        kilometers: string;
+        seats: number;
+        buildingLocation: string;
 
-        constructor (bName: string, type: string, price: number, image: string, color: string, motorbike: string, trucks: string) {
+        constructor (bName: string, type: string, price: number, image: string, color: string, motorbike: string, trucks: string, fueltype: string, kilometers: string, seats: number, buildingLocation: string) {
             super(bName, type, price, image, color);
             this.motorbike = motorbike;
             this.trucks = trucks;
+            this.fueltype = fueltype;
+            this.kilometers = kilometers;
+            this.seats = seats;
+            this.buildingLocation = buildingLocation;
         }
       }
 let astonMartin = document.getElementById("carname") as HTMLElement
